@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>hi-2.de</title>
+</head>
+<style>
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block; }
+mark, rp, rt, ruby, summary, time{ display: inline }
+
+/* Global properties ======================================================== */
+body { 
+    background:#212222;
+    line-height:1em;
+    color:#242424;
+}
+
+
+
+/* Global Structure ============================================================= */
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+    font-size:.8125em;
+}
+
+    /* Header */
+    header{
+        height:72px;
+        overflow:hidden;
+    }
+    
+    /*Gallery*/
+    #gallery {
+        height:496px;
+        overflow:hidden;
+    }
+    
+    /* Content */
+    #content {
+        float: left;
+        width: 572px;
+    }
+    
+    /* Sidebar */
+    aside{
+        float: left;
+        width: 302px;
+        margin-right:52px;
+    }
+            
+    /* Footer */
+    footer{
+        padding:20px 0 22px 0;
+        border-top:5px solid #eee;
+    }
+
+
+
+
+/* Left & Right alignment */
+
+.fleft { float:left;}
+.fright { float:right;}
+.clear { clear:both;}
+
+.col-1, .col-2, .col-3 { float:left;}
+
+.alignright { text-align:right;}
+.aligncenter { text-align:center;}
+
+.wrapper { 
+    width:100%;
+    overflow:hidden;
+}
+
+/* The inside class provides consistent padding. To be used often! */
+.inside{ padding: 32px 37px 50px 37px; }
+
+
+/*----- form defaults -----*/
+input, select, textarea { 
+    font-size:1em;
+    vertical-align:middle;
+    font-weight:normal;
+}
+
+/*----- other -----*/
+figure { margin-bottom:18px;}
+
+.img-indent { 
+    margin:0 20px 0 0; 
+    float:left;
+}
+.img-box { 
+    width:100%; 
+    overflow:hidden; 
+    padding-bottom:15px;
+}
+    .img-box figure { 
+        float:left; 
+        margin:0 20px 0 0;
+        padding:0;
+    }
+
+.extra-wrap { 
+    overflow:hidden;
+}
+
+p {margin-bottom:18px;}
+.p1 { margin-bottom:9px;}
+.p2 { margin-bottom:18px;}
+.p3 { margin-bottom:27px;
+}
+
+
+/*----- txt, links, lines, titles -----*/
+a {
+    color:#60B000; 
+    outline:none;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+
+header h1 {
+    position:absolute;
+    left:40px;
+}
+h2 {
+    font-size:30px;
+    line-height:1.2em;
+    font-weight:normal;
+    color:#212222;
+    margin-bottom:22px;
+}
+    h2 span {
+        color:#8a8a8a;
+    }
+    h2 a:hover {
+        text-shadow: 1px 1px 1px #888;
+        text-decoration: none;
+    }
+h3 {
+    font-size:1em;
+    margin-bottom:6px;
+}
+    h3 a:hover {
+        text-shadow: 1px 1px 1px #888;
+        text-decoration: none;
+    }
+
+
+
+
+/*==================boxes====================*/
+.main-box {
+    background:#fff;
+    width:100%;
+}
+
+
+.contacts {
+    padding-bottom:20px;
+}
+    .contacts li {
+        width:100%;
+        overflow:hidden;
+    }
+        .contacts li strong {
+            float:left;
+            width:95px;
+        }
+
+
+.list1 {
+    margin-left:12px;
+    padding-bottom:18px;
+}
+.list1 li {
+    padding:0 0 0 12px;
+}
+
+
+
+/*===== header =====*/
+header nav {
+    float:right;
+}
+        header nav ul li {
+            float:left;
+        }
+            header nav ul li a {
+                font-size:22px;
+                color:#fff;
+                height:67px;
+                line-height:67px;
+                text-decoration:none;
+                width:101px;
+                text-align:center;
+                float:left;
+                background:#433b8f;
+                background-image: gradient(top, #383282, #484095); /* FF3.6 */
+                background-image: -moz-linear-gradient(top, #383282, #484095); /* FF3.6 */
+                background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #383282),color-stop(1, #484095)); /* Saf4+, Chrome */
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#383282', EndColorStr='#484095'); /* IE6,IE7 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#383282', EndColorStr='#484095')"; /* IE8 */
+        }
+        header nav ul li a.current, header nav ul li a:hover {
+            padding-bottom:5px;
+            text-decoration: none;
+        }
+        
+        header nav ul li:nth-of-type(2) a {
+            background:#0184cd;
+            background-image: -moz-linear-gradient(top, #017bc8, #018ed3); /* FF3.6 */
+            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #017bc8),color-stop(1, #018ed3)); /* Saf4+, Chrome */
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#017bc8', EndColorStr='#018ed3'); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#017bc8', EndColorStr='#018ed3')"; /* IE8 */
+        }
+        header nav ul li:nth-of-type(3) a {
+            background:#7cbc19;
+            background-image: -moz-linear-gradient(top, #73b515, #86c31d); /* FF3.6 */
+            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #73b515),color-stop(1, #86c31d)); /* Saf4+, Chrome */
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#73b515', EndColorStr='#86c31d'); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#73b515', EndColorStr='#86c31d')"; /* IE8 */
+        }
+        header nav ul li:nth-of-type(4) a {
+            background:#ffbc00;
+            background-image: -moz-linear-gradient(top, #ffb500, #ffc300); /* FF3.6 */
+            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ffb500),color-stop(1, #ffc300)); /* Saf4+, Chrome */
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffb500', EndColorStr='#ffc300'); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffb500', EndColorStr='#ffc300')"; /* IE8 */
+        }
+        header nav ul li:nth-of-type(5) a {
+            background:#f07502;
+            background-image: -moz-linear-gradient(top, #ee6c01, #f27f02); /* FF3.6 */
+            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ee6c01),color-stop(1, #f27f02)); /* Saf4+, Chrome */
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#ee6c01', EndColorStr='#f27f02'); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ee6c01', EndColorStr='#f27f02')"; /* IE8 */
+        }
+        header nav ul li:nth-of-type(6) a {
+            background:#d00110;
+            background-image: -moz-linear-gradient(top, #d00110, #da0116); /* FF3.6 */
+            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #d00110),color-stop(1, #da0116)); /* Saf4+, Chrome */
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#d00110', EndColorStr='#da0116'); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#d00110', EndColorStr='#da0116')"; /* IE8 */
+        }
+
+
+/*===== content =====*/
+#content {
+    
+}
+    #content img, aside img {
+        border:3px solid #ebebeb;
+        border-radius:4px;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+    }
+    #content img:hover {
+        border-color:#bbb;
+    }
+    
+
+/*--- news list styles ---*/
+    .news li {
+        overflow:hidden;
+        position:relative;
+        padding:0 0 26px 84px;
+    }
+    .news li:last-child {
+        padding-bottom:0;
+    }
+    
+        .news li figure {
+            width:59px;
+            height:59px;
+            position:absolute;
+            left:0;
+            top:0;
+            text-align:center;
+            border:3px solid #ebebeb;
+            border-radius:4px;
+            -moz-border-radius:4px;
+            -webkit-border-radius:4px;
+            font-size:10px;
+            color:#fff;
+            text-transform:uppercase;
+        }
+            .news li figure strong {
+                display:block;
+                font-size:30px;
+                line-height:1.2em;
+                margin-bottom:-7px;
+                padding-top:4px;
+            }
+        
+    .news p {
+        font-size: 14px;
+        font-style: italic;
+        color: dimGray;
+    }
+
+.cols{
+    width:270px;
+    float: left;
+}
+
+.team-list li {
+    width:100%;
+    overflow:hidden;
+    padding-bottom:43px;
+}
+.team-list li:last-child {
+    padding-bottom:0;
+}
+    .team-list li figure {
+        float:left;
+        margin:0 20px 0 0;
+        padding:0;
+    }
+
+
+/*===== footer =====*/
+footer {
+    color:#fff;
+}
+    footer .fleft {
+        padding-left:40px;
+    }
+    footer .fright {
+        padding-right:40px;
+    }
+
+
+/*----- forms -----*/
+#contacts-form { 
+    clear:right;
+    width:100%;
+    overflow:hidden;
+}
+    #contacts-form fieldset { 
+        border:none;
+        float:left;
+    }
+        #contacts-form .field { 
+            clear:both;
+        }
+            #contacts-form label { 
+                float:left;
+                width:110px;
+                line-height:18px;
+                padding-bottom:6px;
+                font-weight:bold;
+            }
+            #contacts-form input {
+                width:205px;
+                padding:1px 0 1px 3px;
+                background:none;
+                border:1px solid #e5e5e5;
+                color:#616161;
+                float:left
+            }
+            #contacts-form input:invalid {
+                border-color:red;
+            }
+            #contacts-form textarea { 
+                width:450px;
+                height:215px;
+                padding:1px 0 1px 3px;
+                background:none;
+                border:1px solid #e5e5e5;
+                color:#616161;
+                margin-bottom:12px;
+                overflow:auto;
+                float:left;
+            }
+            #contacts-form div:last-child {
+                padding-left:110px;
+            }
+
+/*==========================================*/
+
+  body { 
+    font-family: 'Iceland';
+    background: url(http://subtlepatterns.com/patterns/px_by_Gre3g.png);
+  }
+  header h1 { font-size: 60px; }
+  td { vertical-align: top; }
+  a { color: #FFF; }
+  a:hover { cursor: pointer; text-decoration: none; color: #fe57a1; }
+  ul li { margin-top: 20px; color: #FFF; list-style: square; }
+  .list { margin: 26px 0 8px 15px; font-size: 25px; }
+  ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+  ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+</style>
+<link rel="shortcut icon" href="/assets/2b.ico" type="image/x-icon" />
+<link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+<body>
+
+<header>
+  <h1><a href="/">Hello, 2*</a></h1>
+</header>
+<hr>
+<table>
+<tr>
+
+<td>
+<div id="projects" class="list">
+  <ul>
+    <li><a target="_blank" href="http://rubyonrails.org">rails</a></li>
+    <li><a target="_blank" href="http://nginx.org">nginx</a></li>
+    <li><a target="_blank" href="http://unicorn.bogomips.org">unicorn</a></li>
+    <li><a target="_blank" href="http://nodejs.org">node.js</a></li>
+    <li><a target="_blank" href="http://socket.io">socket.io</a></li>
+    <li><a target="_blank" href="http://coffeescript.org">coffeescript</a></li>
+    <li><a target="_blank" href="http://twitter.github.com/bootstrap/">bootstrap</a></li>
+    <li><a target="_blank" href="http://lucene.apache.org">lucene</a></li>
+    <li><a target="_blank" href="http://www.mongodb.org">mongodb</a></li>
+    <li><a target="_blank" href="http://code.google.com/p/leveldb">leveldb</a></li>
+    <li><a target="_blank" href="http://memcached.org/">memcached</a></li>
+    <li><a target="_blank" href="http://redis.io">redis</a></li>
+    <li><a target="_blank" href="http://hadoop.apache.org">hadoop</a></li>
+    <li><a target="_blank" href="http://llvm.org/">llvm</a></li>
+    <li><a target="_blank" href="http://cocos2d-x.org/">cocos2d-x</a></li>
+    <li><a target="_blank" href="http://unrealengine.com/">unreal</a></li>
+    <li><a target="_blank" href="http://unity3d.com/">unity</a></li>
+  </ul>
+</div>
+</td>
+
+<td>
+<div id="books" class="list">
+  <ul>
+    <li><a target="_blank" href="http://progit.org/book">Pro Git</a></li>
+    <li><a target="_blank" href="http://book.git-scm.com/index.html">The Git Community Book</a></li>
+    <li><a target="_blank" href="http://diveintohtml5.info/">Dive into HTML5</a></li>
+    <li><a target="_blank" href="http://www.empiricalreality.com/2010/09/22/2010-nosql-summer-reading-list/">NOSQL Reading List</a></li>
+    <li><a target="_blank" href="http://www.aosabook.org/en/index.html">The Architecture of Open Source Applications</a></li>
+  </ul>
+</div>
+</td>
+
+<td>
+<div id="languages" class="list">
+  <ul>
+    <li><a target="_blank" href="http://learn.akae.cn/media/index.html">Linux C Programming</a></li>
+    <li><a target="_blank" href="http://www.learncpp.com">Learn C++</a></li>
+    <li><a target="_blank" href="http://docs.oracle.com/javase/tutorial/index.html">The Java Tutorials</a></li>
+    <li><a target="_blank" href="http://ruby-doc.org/docs/ProgrammingRuby">Programming Ruby</a></li>
+    <li><a target="_blank" href="http://woodpecker.org.cn/diveintopython3">Dive into Python</a></li>
+    <li><a target="_blank" href="http://www.lua.org/pil">Programming in Lua</a></li>
+    <li><a target="_blank" href="http://www.gigamonkeys.com/book">Pracical Common Lisp</a></li>
+    <li><a target="_blank" href="http://pragprog.com/book/jaerlang/programming-erlang">Programming Erlang</a></li>
+    <li><a target="_blank" href="https://developer.mozilla.org/en-US/learn">Learn HTML/CSS/JavaScript</a></li>
+    <li><a target="_blank" href="http://learncodethehardway.org">Learn [x] The Hard Way</a></li>
+    <li><a target="_blank" href="http://www.tldp.org/LDP/abs/html/index.html">Advanced Bash-Scripting Guide</a></li>
+    <li><a target="_blank" href="http://developer.apple.com/devcenter/ios/index.action">iOS Dev Center</a></li>
+    <li><a target="_blank" href="http://developer.apple.com/devcenter/mac/index.action">Mac Dev Center</a></li>
+    <li><a target="_blank" href="http://developer.android.com/guide/index.html">Android Developer's Guide</a></li>
+  </ul>
+</div>
+</td>
+
+<td>
+<div id="classic" class="list">
+  <ul>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Computer+Systems:+A+Programmer%27s+Perspective">CSAPP</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Structure+and+Interpretation+of+Computer+Programs">SICP</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Introduction+to+Algorithms">CLRS</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=The+Art+of+Unix+Programming">TAOUP</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=The+Art+of+Computer+Programming">TAOCP</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Pattern-Oriented+Software+Architecture">POSA</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=TCP%2FIP+Illustrated">TCPIP</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Understanding+the+Linux+Kernel">ULK</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Advanced+Programming+in+the+UNIX+Environment">APUE</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Unix+Network+Programming">UNP</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Programming+with+POSIX®+Threads">PPT</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Compilers:+Principles%2C+Techniques%2C+and+Tools">Dragon Book</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Programming+Pearls">Programming Pearls</a></li>
+    <li><a target="_blank" href="http://www.google.com.hk/?q=Code+Complete">Code Complete</a></li>
+  </ul>
+</div>
+</td>
+
+</tr>
+</table>
+
+<script>
+var _gaq=[['_setAccount','UA-27819949-1'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
